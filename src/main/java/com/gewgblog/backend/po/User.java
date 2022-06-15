@@ -1,11 +1,15 @@
 package com.gewgblog.backend.po;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name="t_user")
 public class User {
+
+    // user own attributes
     @Id
     @GeneratedValue
     private long id;
@@ -18,6 +22,10 @@ public class User {
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
+
+    // relationships
+    @OneToMany
+    private List<Blog> blogs = new ArrayList<>();
 
     public void setId(long id) {
         this.id = id;

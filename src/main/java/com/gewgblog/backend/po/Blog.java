@@ -1,33 +1,65 @@
 package com.gewgblog.backend.po;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.*;
 
 @Entity
 @Table(name = "t_blog")
 public class Blog {
-
     @Id
     @GeneratedValue
     private long id;
 
+    // blog own attributes
     private String title;
     private String content;
     private String image;
     private String flag;
     private Integer views;
-
     private boolean showPublic;
     private boolean canComment;
     private boolean canTransfer;
-
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
+    // relationships
+    @ManyToOne
+    private Type type;
+    @ManyToOne
+    private User user;
+    @OneToMany
+    private List<Comment> comments = new ArrayList<>();
+
     public Blog() {
 
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     public long getId() {
