@@ -1,10 +1,7 @@
 package com.gewgblog.backend.po;
 
 import java.util.Date;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "t_blog")
@@ -24,7 +21,9 @@ public class Blog {
     private boolean canComment;
     private boolean canTransfer;
 
+    @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date updateTime;
 
     public Blog() {
