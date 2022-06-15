@@ -1,0 +1,4 @@
+2022-06-15 05:21:37.777  INFO 74732 --- [main] c.g.backend.GewgblogBackendApplication   : Starting GewgblogBackendApplication using Java 1.8.0_312 on geweideMacBook-Pro.local with PID 74732 (/Users/aa/Desktop/myBlog/gewgBlog_backend/target/classes started by aa in /Users/aa/Desktop/myBlog/gewgBlog_backend)
+2022-06-15 05:21:37.778  INFO 74732 --- [main] c.g.backend.GewgblogBackendApplication   : The following 1 profile is active: "pro"
+2022-06-15 05:21:38.247  WARN 74732 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-06-15 05:21:38.287  INFO 74732 --- [main] c.g.backend.GewgblogBackendApplication   : Started GewgblogBackendApplication in 0.682 seconds (JVM running for 0.897)
