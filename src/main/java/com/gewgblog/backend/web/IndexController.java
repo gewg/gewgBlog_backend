@@ -1,4 +1,4 @@
-package com.gewgblog.backend.controller;
+package com.gewgblog.backend.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,8 +8,6 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(){
-
-
         return "Index";
     }
 }
